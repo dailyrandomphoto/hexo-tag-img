@@ -1,6 +1,9 @@
 {
   "extends": "hexo",
   "root": true,
+  "globals": {
+    "hexo": true
+  },
   "rules": {
     "one-var": 0,
     "operator-linebreak": [
