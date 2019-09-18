@@ -1,0 +1,44 @@
+{
+  "name": "hexo-tag-img",
+  "version": "0.0.1",
+  "description": "Hexo image tag plugin extension.",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "mocha test/index.js",
+    "test-cov": "nyc npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dailyrandomphoto/hexo-tag-img.git"
+  },
+  "keywords": [
+    "hexo",
+    "blog",
+    "tag",
+    "img",
+    "image"
+  ],
+  "author": "dailyrandomphoto <dailyrandomphoto@gmail.com> (https://www.dailyrandomphoto.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dailyrandomphoto/hexo-tag-img/issues"
+  },
+  "homepage": "https://github.com/dailyrandomphoto/hexo-tag-img#readme",
+  "dependencies": {
+    "hexo-util": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "eslint": "^6.4.0",
+    "eslint-config-hexo": "^3.0.0",
+    "hexo": "^3.9.0",
+    "lint-staged": "^9.2.5",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  }
+}
