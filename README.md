@@ -11,6 +11,16 @@ After installing this plugin, the original `img` tag plugin will be replaced by 
 npm install --save hexo-tag-img
 ```
 
+## Syntax
+Inserts an image with specified size.
+```
+{% img [class names] /path/to/image [width] [height] "title text" "alt text" %}
+{% image [class names] /path/to/image [width] [height] 'title text' 'alt text' %}
+```
+- `'`, `"` symbols are allowed in title and alt.
+- `title` and `alt` must be quoted with `"` or `'`.
+- For security concerns, the value of attributes will be escaped.
+
 ## Syntax of the Original Version
 Inserts an image with specified size. [See more](https://hexo.io/docs/tag-plugins#Image)
 ```
@@ -19,5 +29,5 @@ Inserts an image with specified size. [See more](https://hexo.io/docs/tag-plugin
 ```
 
 ### Issues of this version
-- Can't use `'`, `"` symbols in title, alt. Should use escaped text `&#39;`, `&quot;`.
+- Can't use `'`, `"` symbols in title and alt. Should use escaped text `&#39;`, `&quot;`.
 - The value of title and alt is not escaped.

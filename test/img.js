@@ -91,7 +91,7 @@ describe('img', () => {
   });
 
   it('class + src + title', () => {
-    const $ = cheerio.load(img('left https://placekitten.com/200/300 Place Kitten'.split(' ')));
+    const $ = cheerio.load(img(['left', 'https://placekitten.com/200/300', 'Place Kitten']));
 
     $('img').attr('src').should.eql('https://placekitten.com/200/300');
     $('img').attr('class').should.eql('left');
@@ -99,7 +99,7 @@ describe('img', () => {
   });
 
   it('class + src + width + title', () => {
-    const $ = cheerio.load(img('left https://placekitten.com/200/300 200 Place Kitten'.split(' ')));
+    const $ = cheerio.load(img(['left', 'https://placekitten.com/200/300', 200, 'Place Kitten']));
 
     $('img').attr('src').should.eql('https://placekitten.com/200/300');
     $('img').attr('class').should.eql('left');
@@ -108,7 +108,7 @@ describe('img', () => {
   });
 
   it('class + src + width + height + title', () => {
-    const $ = cheerio.load(img('left https://placekitten.com/200/300 200 300 Place Kitten'.split(' ')));
+    const $ = cheerio.load(img(['left', 'https://placekitten.com/200/300', 200, 300, 'Place Kitten']));
 
     $('img').attr('src').should.eql('https://placekitten.com/200/300');
     $('img').attr('class').should.eql('left');
@@ -118,7 +118,7 @@ describe('img', () => {
   });
 
   it('class + src + width + height + title + alt', () => {
-    const $ = cheerio.load(img('left https://placekitten.com/200/300 200 300 "Place Kitten" "A cute kitten"'.split(' ')));
+    const $ = cheerio.load(img(['left', 'https://placekitten.com/200/300', 200, 300, 'Place Kitten', 'A cute kitten']));
 
     $('img').attr('src').should.eql('https://placekitten.com/200/300');
     $('img').attr('class').should.eql('left');
@@ -126,5 +126,15 @@ describe('img', () => {
     $('img').attr('height').should.eql('300');
     $('img').attr('title').should.eql('Place Kitten');
     $('img').attr('alt').should.eql('A cute kitten');
+  });
+
+  it('title and alt should escaped', () => {
+    img(['https://placekitten.com/200/300', 'a\'b"c', 'd\'e"f'])
+      .should.eql('<img src="https://placekitten.com/200/300" title="a&#39;b&quot;c" alt="d&#39;e&quot;f">');
+  });
+
+  it('title and alt should not double escaped', () => {
+    img(['https://placekitten.com/200/300', 'a&#39;b&quot;c', 'd&#39;e&quot;f'])
+      .should.eql('<img src="https://placekitten.com/200/300" title="a&#39;b&quot;c" alt="d&#39;e&quot;f">');
   });
 });

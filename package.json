@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-img",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Hexo image tag plugin extension.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/dailyrandomphoto/hexo-tag-img#readme",
   "dependencies": {
-    "hexo-util": "^1.2.0"
+    "escape-html": "^1.0.3",
+    "hexo-util": "^1.2.0",
+    "unescape": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
