@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-img",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hexo image tag plugin extension.",
   "main": "index.js",
   "scripts": {
