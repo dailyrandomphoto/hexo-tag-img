@@ -3,10 +3,9 @@
 [![NPM Downloads][npm-downloads-image]][npm-url]
 [![LICENSE][license-image]][license-url]
 [![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 [![dependencies Status][dependencies-image]][dependencies-url]
 [![devDependencies Status][devDependencies-image]][devDependencies-url]
-
 
 Inserts an image with specified size.
 
@@ -53,6 +52,6 @@ Copyright (c) 2019 dailyrandomphoto. Licensed under the [MIT license][license-ur
 [npm-version-image]: https://img.shields.io/npm/v/hexo-tag-img.svg
 [license-image]: https://img.shields.io/npm/l/hexo-tag-img.svg
 [travis-image]: https://img.shields.io/travis/dailyrandomphoto/hexo-tag-img/master
-[coveralls-image]: https://img.shields.io/coveralls/c/github/dailyrandomphoto/hexo-tag-img/master
+[coveralls-image]: https://coveralls.io/repos/github/dailyrandomphoto/hexo-tag-img/badge.svg?branch=master
 [dependencies-image]: https://david-dm.org/dailyrandomphoto/hexo-tag-img/status.svg
 [devDependencies-image]: https://david-dm.org/dailyrandomphoto/hexo-tag-img/dev-status.svg
