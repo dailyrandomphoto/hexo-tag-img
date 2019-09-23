@@ -14,6 +14,8 @@ describe('img', () => {
     const $ = cheerio.load(img(['https://placekitten.com/200/300']));
 
     $('img').attr('src').should.eql('https://placekitten.com/200/300');
+    should.not.exist($('img').attr('title'));
+    should.not.exist($('img').attr('alt'));
   });
 
   it('src //', () => {
@@ -88,6 +90,8 @@ describe('img', () => {
     $('img').attr('class').should.eql('left');
     $('img').attr('width').should.eql('200');
     $('img').attr('height').should.eql('300');
+    should.not.exist($('img').attr('title'));
+    should.not.exist($('img').attr('alt'));
   });
 
   it('class + src + title', () => {
@@ -115,6 +119,7 @@ describe('img', () => {
     $('img').attr('width').should.eql('200');
     $('img').attr('height').should.eql('300');
     $('img').attr('title').should.eql('Place Kitten');
+    should.not.exist($('img').attr('alt'));
   });
 
   it('class + src + width + height + title + alt', () => {
