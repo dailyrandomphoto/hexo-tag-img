@@ -13,8 +13,8 @@ node_js:
   - "node"
 
 script:
-  - npm run eslint
-  - npm run test-cov
+  - npm run lint
+  - npm run test:cov
 
 after_script:
   - npm install coveralls

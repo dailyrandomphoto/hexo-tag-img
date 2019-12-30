@@ -37,6 +37,7 @@ Inserts an image with specified size. [See more](https://hexo.io/docs/tag-plugin
 ### Issues of this version
 - Can't use `'`, `"` symbols in title and alt. Should use escaped text `&#39;`, `&quot;`.
 - The value of title and alt is not escaped.
+- https://github.com/hexojs/hexo/issues/1277
 
 ## License
 Copyright (c) 2019 dailyrandomphoto. Licensed under the [MIT license][license-url].
