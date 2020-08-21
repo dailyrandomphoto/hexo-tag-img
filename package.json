@@ -28,7 +28,7 @@
   "homepage": "https://github.com/dailyrandomphoto/hexo-tag-img#readme",
   "dependencies": {
     "escape-html": "^1.0.3",
-    "hexo-util": "~1.2.0",
+    "hexo-util": "~2.4.0",
     "unescape": "^1.0.1"
   },
   "devDependencies": {
